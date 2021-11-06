@@ -6,6 +6,18 @@
 -->
 <html>
 	<head>
+		<script> 
+		
+		async function pic(){ 
+			cobrowser = await puppeteer.launch();
+			const page = await browser.newPage();
+			var s = await page.goto('https://www.google.com/search?q=vrijeme+banja+luka&client=firefox-b-d&ei=p7aGYdm5J6eH9u8P6ce9kA8&oq=vrijeme+banja+luka&gs_lcp=Cgdnd3Mtd2l6EAMyEAgAEIAEELEDEIMBEEYQgAIyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBggAEAcQHjIFCAAQgAQyBQgAEIAEOgcIABBHELADOgcIABCwAxBDOgQIABANOgcILhCxAxANSgQIQRgAUOgTWN0eYOYjaANwAngAgAHxAYgBvQmSAQUwLjcuMZgBAKABAcgBCsABAQ&sclient=gws-wiz&ved=0ahUKEwiZqd6EnYT0AhWng_0HHeljD_IQ4dUDCA0&uact=5');
+
+			await page.screenshot({path:"../portwebsite/images/puppet/1.jpg"})
+			await browser.close();
+		};
+		
+		</script>
 		<title>Katarina Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -43,7 +55,7 @@
 									<p>In this project I cleaned Nashvile housing data from Kaggle in Oracle SQL</p>
 									
 									<ul class="actions">
-										<li><a href="https://gitlab.com/Kaca1/mtelpraksa/-/blob/main/Projekat1.sql" target="_blank" class="button primary" >View Project</a></li>
+										<li><a href="https://gitlab.com/Kaca1/mtelpraksa/-/blob/main/project3.sql" target="_blank" class="button primary" >View Project</a></li>
 										
 										
 									</ul>
@@ -54,6 +66,9 @@
 									<img src="images/houses.jpg" alt="" />
 								</div>
 							</section>
+
+							
+						
 						<!-- Panel (Spotlight) -->
 						<section class="panel spotlight large left">
 							<div class="content span-5">
@@ -88,50 +103,28 @@
 									<img src="images/tab2.jpg" alt="" />
 								</div>
 							</section>
-
-
+						
 						<!-- Panel -->
-							<section class="panel">
-								<div class="intro color2">
-									<h2 class="major">Web Scraping <span class="icon solid fa-code"><span class="label">Nullam</span></span></h2>
-									
-									<p>Showing off my new web scraping skill. ()</p>
+						<section class="panel spotlight medium left">
+							<div class="intro joined">
+								<h2 class="major">Movies data exploration  <span class="icon solid fa-code"><span class="label">Amet</span></span></h2>
+								
+								<p>Exploring movie data from imdb.</p>
+								
+								<ul class="actions">
+									<li><a href="https://gitlab.com/Kaca1/mtelpraksa/-/blob/main/movies.ipynb" target="_blank" class="button primary" >View Project</a></li>
+								</ul>
+							</div>
+							
+							<div class="inner">
+								
+							</div>
+							<div class="image filtered tinted" data-position="left">
+								<img src="images/m.jpg" alt="" />
+							</div>
+						</section>
 
-
-
-								</div>
-								<div class="gallery">
-
-									<div class="group span-3">
-										<a href="https://www.gardendesign.com/pictures/images/675x529Max/site_3/helianthus-yellow-flower-pixabay_11863.jpg" class="image filtered span-3" data-position="bottom"><img src="https://www.gardendesign.com/pictures/images/675x529Max/site_3/helianthus-yellow-flower-pixabay_11863.jpg" alt="" /></a>
-										<a href="https://www.avasflowers.net/img/prod_img/avasflowers-dreaming-of-tuscany-bouquet.jpg" class="image filtered span-1-5" data-position="center"><img src="https://www.avasflowers.net/img/prod_img/avasflowers-dreaming-of-tuscany-bouquet.jpg" alt="" /></a>
-										<a href="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__480.jpg" class="image filtered span-1-5" data-position="bottom"><img src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__480.jpg" alt="" /></a>
-									</div>
-
-
-									<a href="images/gallery/fulls/04.jpg" class="image filtered span-2-5" data-position="top"><img src="images/gallery/thumbs/04.jpg" alt="" /></a>
-
-
-
-									<div class="group span-4-5">
-										<a href="images/gallery/fulls/05.jpg" class="image filtered span-3" data-position="top"><img src="images/gallery/thumbs/05.jpg" alt="" /></a>
-										<a href="images/gallery/fulls/06.jpg" class="image filtered span-1-5" data-position="center"><img src="images/gallery/thumbs/06.jpg" alt="" /></a>
-										<a href="images/gallery/fulls/07.jpg" class="image filtered span-1-5" data-position="bottom"><img src="images/gallery/thumbs/07.jpg" alt="" /></a>
-										<a href="images/gallery/fulls/08.jpg" class="image filtered span-3" data-position="top"><img src="images/gallery/thumbs/08.jpg" alt="" /></a>
-									</div>
-
-
-									<a href="images/gallery/fulls/09.jpg" class="image filtered span-2-5" data-position="right"><img src="images/gallery/thumbs/09.jpg" alt="" /></a>
-								</div>
-
-
-
-
-
-								<div class="image filtered tinted" data-position="top right">
-									<img src="images/amazon.jpg" alt="" />
-								</div>
-							</section>
+						
 
 						<!-- Panel -->
 							<section class="panel color4-alt">
@@ -167,6 +160,19 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script> 
+		
+					const puppeteer = require('puppeteer');
+					cobrowser = await puppeteer.launch();
+					const page = await browser.newPage();
+					var s = await page.goto('https://www.google.com/search?q=vrijeme+banja+luka&client=firefox-b-d&ei=p7aGYdm5J6eH9u8P6ce9kA8&oq=vrijeme+banja+luka&gs_lcp=Cgdnd3Mtd2l6EAMyEAgAEIAEELEDEIMBEEYQgAIyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBggAEAcQHjIFCAAQgAQyBQgAEIAEOgcIABBHELADOgcIABCwAxBDOgQIABANOgcILhCxAxANSgQIQRgAUOgTWN0eYOYjaANwAngAgAHxAYgBvQmSAQUwLjcuMZgBAKABAcgBCsABAQ&sclient=gws-wiz&ved=0ahUKEwiZqd6EnYT0AhWng_0HHeljD_IQ4dUDCA0&uact=5');
+		
+					var p = await page.screenshot({path:"../portwebsite/images/puppet/1.jpg"})
+					await browser.close();
+					document.getElementById("demo").innerHTML = v;
+				
+				</script>
 
 	</body>
 </html>
